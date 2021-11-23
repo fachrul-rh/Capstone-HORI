@@ -1,31 +1,33 @@
 {
-  "name": "Project-HORI",
+  "name": "project-hori",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start-dev": "webpack serve --config webpack.dev.js",
+    "start-dev": "webpack-dev-server  --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "*",
-    "@babel/preset-env": "*",
-    "babel-loader": "*",
-    "css-loader": "*",
-    "html-webpack-plugin": "*",
-    "style-loader": "*",
-    "webpack": "*",
-    "webpack-cli": "*",
-    "webpack-dev-server": "*",
-    "webpack-merge": "*"
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "@webpack-cli/serve": "^1.6.0",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.4.1",
+    "css-loader": "^3.6.0",
+    "html-webpack-plugin": "^4.5.2",
+    "style-loader": "^2.0.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.0.9"
   },
   "dependencies": {
-    "bootstrap": "*",
+    "bootstrap": "4.0.0",
     "jquery": "*",
     "popper.js": "*",
-    "regenerator-runtime": "*"
+    "regenerator-runtime": "^0.13.5"
   }
 }
