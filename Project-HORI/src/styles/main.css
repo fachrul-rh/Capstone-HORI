@@ -22,6 +22,24 @@
   vertical-align: middle;
 }
 
+.logo-link {
+  padding: 0;
+  margin: 0;
+}
+
+.logo {
+  width: 110px;
+}
+
+nav ul li:hover {
+  color: rgb(2, 145, 2);
+  font-weight: bolder;
+}
+
+.navbar-collapse {
+  margin-left: 25px;
+}
+
 .navbar-toggle {
   z-index: 3;
 }
@@ -141,7 +159,11 @@
 /* jumbotron */
 
 .jumbotron {
-  margin: 40px 0 0 0;
+  margin: 50px 0 0 0;
+}
+
+.my-btn:hover {
+  background-color: rgb(2, 145, 2);
 }
 
 /* footer */
@@ -154,6 +176,15 @@
   padding: 1rem;
   background-color: rgba(178, 181, 184, 0.7);
   text-align: center !important;
+}
+
+footer a {
+  color: rgb(3, 180, 3);
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: rgb(2, 145, 2);
 }
 
 /* loadingPage */
