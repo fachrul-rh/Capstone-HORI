@@ -1,11 +1,9 @@
+import 'regenerator-runtime';
 import './script/component/foot-er';
 import './script/component/app-bar';
 import './script/component/head-bar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import './styles/main.css';
-import './styles/appBar-style/Brands.css';
-import './styles/appBar-style/dh-navbar-centered-brand.css';
-import './styles/footer-style/bottom.css';
-import './styles/appBar-style/navigation.css';
-import './styles/headBar-style/jumbotron.css';
+import './styles/responsive.css';
+import './script/view/main';
