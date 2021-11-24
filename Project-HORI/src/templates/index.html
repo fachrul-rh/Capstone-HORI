@@ -9,6 +9,28 @@
   </head>
   <body>
     <app-bar></app-bar>
+    <head-bar></head-bar>
+    <main id="main">
+      <div class="container">
+        <div class="form-check form-check-inline border rounded p-2">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+          <label class="form-check-label" for="inlineRadio1">RS Bed Covid-19</label>
+        </div>
+        <div class="form-check form-check-inline border rounded p-2 mr-md-3">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+          <label class="form-check-label" for="inlineRadio2">RS Bed Non Covid-19</label>
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Pilih Provinsi</button>
+          <div class="dropdown-menu">...</div>
+        </div>
+        <div class="btn-group mr-md-3">
+          <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">Pilih Kota / Kabupaten</button>
+          <div class="dropdown-menu">...</div>
+        </div>
+        <button type="button" class="btn btn-secondary btn-lg">Search</button>
+      </div>
+    </main>
     <foot-er></foot-er>
   </body>
 </html>
