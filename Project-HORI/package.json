@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "bootstrap": "4.0.0",
+    "chokidar": "^3.5.2",
     "jquery": "*",
     "popper.js": "*",
     "regenerator-runtime": "^0.13.5"
