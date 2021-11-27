@@ -11,10 +11,10 @@ class AppBar extends HTMLElement {
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="#/landing-page">Home </a></li>
-                    <li class="nav-item"><a class="nav-link" href="#/search-page">About </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#/search-page">Search </a></li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#/dev-page">Developers </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#/about-page">About </a></li>
                     <li class="nav-item"><a class="nav-link" href="#/api-page">API </a></li>
                 </ul>
             </div>

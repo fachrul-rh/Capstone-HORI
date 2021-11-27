@@ -1,12 +1,13 @@
 import landingPage from "../view/pages/landing";
 import searchPage from "../view/pages/search";
-import devPage from "../view/pages/developer";
+import aboutPage from "../view/pages/about";
 import apiPage from "../view/pages/apiPage";
  
 const routes = {
+  '/': landingPage,
   '/landing-page': landingPage,
   '/search-page': searchPage,
-  '/dev-page': devPage,
+  '/about-page': aboutPage,
   '/api-page': apiPage
 };
  

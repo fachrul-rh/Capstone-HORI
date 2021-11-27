@@ -1,7 +1,10 @@
 const landingPage = {
     async render() {
       return `
-        <h2>Welcome</h2>
+      <div>
+        <h2 class="title" tabindex="0">Welcome to HORI</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reiciendis minima adipisci ad necessitatibus magni hic, nostrum nesciunt magnam quae eligendi amet! Amet reiciendis deleniti architecto dolore laudantium delectus facere.Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reiciendis minima adipisci ad necessitatibus magni hic, nostrum nesciunt magnam quae eligendi amet! Amet reiciendis deleniti architecto dolore laudantium delectus facere.</p>  
+      </div>
       `;
     },
    
