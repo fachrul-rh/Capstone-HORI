@@ -1,5 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
+const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
 
@@ -37,6 +39,28 @@ module.exports = {
           to: path.resolve(__dirname, 'dist/'),
         },
       ],
+    }),
+    new WebpackPwaManifest({
+      name: 'HORI',
+      short_name: 'HORI',
+      description: 'Hospital Room Information',
+      background_color: '#ffffff',
+      crossorigin: 'use-credentials', //can be null, use-credentials or anonymous
+      icons: [
+        {
+          src: path.resolve('src/public/logo.png'),
+          sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
+          purpose: 'maskable'
+        },
+        // {
+        //   src: path.resolve('src/public/logo.png'),
+        //   size: '1024x1024',
+        //   purpose: 'maskable'
+        // }
+      ]
+    }),
+    new ServiceWorkerWebpackPlugin({
+      entry: path.resolve(__dirname, 'src/script/sw.js'),
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',

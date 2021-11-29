@@ -1,0 +1,47 @@
+{
+  "icons": [
+    {
+      "src": "icon_512x512.fd22319999f76f34389954a26868ed74.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icon_384x384.2aef6c0b6f36b8083c4b7d490c282c94.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icon_256x256.588689e4ae16a2b1cae6ce2abf537a60.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icon_192x192.1b0e780107b52380923c36016dfaa234.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icon_128x128.7d7e49277134c6a10b5228b50f56e217.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icon_96x96.33c61cb6ec8bced6a868cf356d5b1460.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "name": "HORI",
+  "short_name": "HORI",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "Hospital Room Information",
+  "background_color": "#ffffff"
+}
