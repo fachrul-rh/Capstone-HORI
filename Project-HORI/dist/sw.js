@@ -4,7 +4,7 @@ var serviceWorkerOption = {
     "/favicon.png",
     "/logo.png",
     "/index.html",
-    "/manifest.9e15a64cb7d5c6513a8cd79e0e1d2e30.json",
+    "/manifest.674aa0b4e580f0f551f0a755da07bc9f.json",
     "/icon_512x512.fd22319999f76f34389954a26868ed74.png",
     "/icon_384x384.2aef6c0b6f36b8083c4b7d490c282c94.png",
     "/icon_256x256.588689e4ae16a2b1cae6ce2abf537a60.png",

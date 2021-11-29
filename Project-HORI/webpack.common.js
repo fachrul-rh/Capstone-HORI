@@ -50,7 +50,7 @@ module.exports = {
         {
           src: path.resolve('src/public/logo.png'),
           sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
-          purpose: 'maskable'
+          purpose: 'any maskable'
         },
         // {
         //   src: path.resolve('src/public/logo.png'),
