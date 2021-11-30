@@ -7,6 +7,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import './styles/main.css';
 import './styles/responsive.css';
 import App from './script/view/main';
+import swRegister from './script/functions/sw-register';
 
 const app = new App({
   button: document.querySelector('.myNavToggler'),
@@ -20,4 +21,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+  swRegister();
 });
