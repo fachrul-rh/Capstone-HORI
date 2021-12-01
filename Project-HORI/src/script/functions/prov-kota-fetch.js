@@ -22,6 +22,17 @@ class ShowSearchPage {
       console.log(error);
     }
   }
+
+  static async fetchRs(idProv, idKota, tipeBed) {
+    try {
+      const response = await fetch('https://rs-bed-covid-api.vercel.app/api/get-hospitals?provinceid=' + idProv + '&cityid=' + idKota + '&type=' + tipeBed);
+      const rs = await response.json();
+
+      return rs.hospitals;
+    } catch (err) {
+      console.log(err);
+    }
+  }
 }
 
 export default ShowSearchPage;

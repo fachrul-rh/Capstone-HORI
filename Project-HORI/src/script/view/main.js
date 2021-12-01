@@ -13,6 +13,7 @@ class App {
     this._content.innerHTML = await page.render();
     await page.afterRender();
   }
+
   constructor({ button, drawer, content }) {
     this._button = button;
     this._drawer = drawer;
