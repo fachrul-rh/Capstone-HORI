@@ -15,9 +15,9 @@ const searchPage = {
   },
 
   async afterRender() {
-    //membaut template search
+    //membuat template search
     const searchContainer = document.querySelector('#searchContent');
-      searchContainer.innerHTML += createTemplateSearch(); //
+    searchContainer.innerHTML += createTemplateSearch(); //
     // ambil element
     const searchBtn = document.querySelector('.btn-search'),
       optionProv = document.querySelector('.provinsi'),
@@ -26,18 +26,9 @@ const searchPage = {
     const radio = document.querySelectorAll('.btn-check');
     let infoRs = ``;
 
-    // document.getElementById('form-check-label1').setAttribute('onclick', `${checkRadio1()}`);
-    // document.getElementById('form-check-label2').setAttribute('onclick', `${checkRadio2()}`);
     function cariTypeBed() {
       return radio[0].checked === true ? (searchBtn.dataset.tipebed = radio[0].value) : (searchBtn.dataset.tipebed = radio[1].value);
     }
-    // function checkRadio1() {
-    //   document.getElementById('covidRadios1').checked = 'checked';
-    // }
-
-    // function checkRadio2() {
-    //   document.getElementById('covidRadios2').checked = 'checked';
-    // }
 
     const tampilProvinsi = (provinsi) => {
       let dropdownProv = `<option value ="" disabled selected hidden>Pilih Provinsi</option>`;
@@ -74,7 +65,6 @@ const searchPage = {
           tampilRsNonCovid(rs, bed);
         }
       });
-      // console.log(infoRs);
       document.querySelector('.cardRs').innerHTML = infoRs;
     }
 
@@ -103,15 +93,15 @@ const searchPage = {
                             <div class="col d-flex align-items-center ">
                             ${(() => {
                               return rs.phone == null
-                                ? ` <a href="/" onclick="return false;" class="btn btn-success fw-bold btn-phone disabled-link"><i class="fas fa-phone me-2"></i>Tidak Tersedia</a> `
-                                : `<a href="tel:${rs.phone}" class="btn btn-success fw-bold btn-phone"><i class="fas fa-phone me-2"></i>${rs.phone}</a>`;
+                                ? ` <a href="/" onclick="return false;" class="btn btn-success fw-bold btn-phone disabled-link"><i class="icon fas fa-phone me-2"></i>Tidak Tersedia</a> `
+                                : `<a href="tel:${rs.phone}" class="btn btn-success fw-bold btn-phone"><i class="icon fas fa-phone me-2"></i>${rs.phone}</a>`;
                             })()}
                               
                             </div>
                             <div class="col-lg-3 d-flex align-items-center justify-content-end">
                               <button type="button" class="btn btn-success fw-bold btn-detail" data-bs-toggle="modal" data-bs-target="#exampleModal" data-idhospital="${
                                 rs.id
-                              }" data-tipebed="${cariTypeBed()}">Detail<i class="fas fa-arrow-right ms-2"></i></button>
+                              }" data-tipebed="${cariTypeBed()}">Detail<i class="icon-arrow fas fa-arrow-right ms-2"></i></button>
                             </div>
                           </div>
                         </div>
@@ -139,8 +129,8 @@ const searchPage = {
                             <div class="col">
                             ${(() => {
                               return rs.phone == null
-                                ? ` <a href="/" onclick="return false;" class="btn btn-success fw-bold btn-phone disabled-link"><i class="fas fa-phone me-2"></i>Tidak Tersedia</a> `
-                                : `<a href="tel:${rs.phone}" class="btn btn-success fw-bold btn-phone"><i class="fas fa-phone me-2"></i>${rs.phone}</a>`;
+                                ? ` <a href="/" onclick="return false;" class="btn btn-success fw-bold btn-phone disabled-link"><i class="icon fas fa-phone me-2"></i>Tidak Tersedia</a> `
+                                : `<a href="tel:${rs.phone}" class="btn btn-success fw-bold btn-phone"><i class="icon fas fa-phone me-2"></i>${rs.phone}</a>`;
                             })()}
                             </div>
                             <div class="col-lg-3 d-flex align-items-center justify-content-end">
@@ -148,7 +138,7 @@ const searchPage = {
 
                               <button type="button" class="btn btn-success fw-bold btn-detail" data-bs-toggle="modal" data-bs-target="#exampleModal" data-idhospital="${
                                 rs.id
-                              }" data-tipebed="${cariTypeBed()}">Detail<i class="fas fa-arrow-right ms-2"></i></button>
+                              }" data-tipebed="${cariTypeBed()}">Detail<i class="icon-arrow fas fa-arrow-right ms-2"></i></button>
                             </div>
                           </div>
                         </div>
@@ -205,8 +195,8 @@ const searchPage = {
               <div class="col d-flex align-items-center">
               ${(() => {
                 return rs.phone == null
-                  ? ` <a href="/" onclick="return false;" class="btn btn-success fw-bold btn-phone disabled-link"><i class="fas fa-phone me-2"></i>Tidak Tersedia</a> `
-                  : `<a href="tel:${rs.phone}" class="btn btn-success fw-bold btn-phone"><i class="fas fa-phone me-2"></i>${rs.phone}</a>`;
+                  ? ` <a href="/" onclick="return false;" class="btn btn-success fw-bold btn-phone disabled-link"><i class="icon fas fa-phone me-2"></i>Tidak Tersedia</a> `
+                  : `<a href="tel:${rs.phone}" class="btn btn-success fw-bold btn-phone"><i class="icon fas fa-phone me-2"></i>${rs.phone}</a>`;
               })()}
               </div>
               <div class="col-lg-3 d-flex align-items-center justify-content-end">
@@ -214,11 +204,73 @@ const searchPage = {
 
                 <button type="button" class="btn btn-success fw-bold btn-detail" data-bs-toggle="modal" data-bs-target="#exampleModal" data-idhospital="${
                   rs.id
-                }" data-tipebed="${cariTypeBed()}">Detail<i class="fas fa-arrow-right ms-2"></i></button>
+                }" data-tipebed="${cariTypeBed()}">Detail<i class="icon-arrow fas fa-arrow-right ms-2"></i></button>
               </div>
             </div>
           </div>
         </div>`;
+    }
+
+    function tampilDetailRs(detail) {
+      const room = detail.bedDetail;
+
+      let detailRs = `<div class="modal-body detail-rs modal-main">
+                        <div class="container mt-5">
+                          <div class="row justify-content-center">
+                            <div class="col-lg-10 col-12">
+                            <h3 class="fw-bold mb-4 text-center">Detail Rumah Sakit</h3>
+                              <div class="card-detailRs">
+                                <h4 class="mt-4">${detail.name}</h4>
+                                <h5>${detail.address}</h5>
+                              ${(() => {
+                                return detail.phone == 'hotline tidak tersedia'
+                                  ? ` <a href="/" onclick="return false;" class="btn btn-success fw-bold btn-phone disabled-link"><i class="icon fas fa-phone me-2"></i>Tidak Tersedia</a> `
+                                  : `<a href="tel:${detail.phone}" class="btn btn-success fw-bold btn-phone"><i class="icon fas fa-phone me-2"></i>${detail.phone}</a>`;
+                              })()}
+    
+                              ${room
+                                .map((room) => {
+                                  return `<div class="card-body room mt-3">
+                                    <div class="row">
+                                      <div class="col-md-6 col-12">
+                                        <p class="mb-0">
+                                        ${room.stats.title} <br />
+                                          <small>Update ${room.time}</small>
+                                        </p>
+                                      </div>
+                                      <div class="col-md-6 col-12">
+                                        <div class="row pt-2 pt-md-0">
+                                          <div class="col-md-4 col-4">
+                                            <div class="text-center pt-1 pb-1" style="background-color: #d0d7f7; border-radius: 5px;  color: #5670e2">
+                                              <div style="font-size: 12px"><b>Tempat Tidur</b></div>
+                                              <div style="font-size: 20px">${room.stats.bed_available}</div>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-4 col-4">
+                                            <div class="text-center pt-1 pb-1" style="background-color: #cfe6da; border-radius: 5px; color: #209e5f">
+                                              <div style="font-size: 12px"><b>Kosong</b></div>
+                                              <div style="font-size: 20px">${room.stats.bed_empty}</div>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-4 col-4">
+                                            <div class="text-center pt-1 pb-1" style="background-color: #e9cbbf; border-radius: 5px; color: #cd511b">
+                                              <div style="font-size: 12px"><b>Antrian</b></div>
+                                              <div style="font-size: 20px">${room.stats.queue}</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>`;
+                                })
+                                .join('')}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>`;
+
+      document.querySelector('.cardRs').innerHTML = detailRs;
     }
 
     // fecthProvinsi
@@ -228,10 +280,8 @@ const searchPage = {
     document.addEventListener('change', async (e) => {
       if (e.target.classList.contains('provinsi')) {
         const idProv = e.target.value;
-        console.log(idProv);
         searchBtn.dataset.idprov = idProv;
         const kota = await ShowSearchPage.fetchKota(idProv);
-        console.log(kota);
         tampilKota(kota);
       }
     });
@@ -242,8 +292,6 @@ const searchPage = {
         searchBtn.disabled = false;
         const idKota = e.target.value;
         searchBtn.dataset.idkota = idKota;
-        console.log(idKota);
-        console.log(searchBtn);
       }
     });
 
@@ -255,14 +303,14 @@ const searchPage = {
       tampilCardRs(rs);
     });
 
-    // document.addEventListener('click', async (e) => {
-    //   e.preventDefault();
-    //   document.getElementById('showHospital').innerHTML = showHospital;
-    //   if (e.target.classList.contains('btn-search')) {
-    //     const rs = await ShowSearchPage.fetchRs(e.target.dataset.idprov, e.target.dataset.idkota, e.target.dataset.tipebed);
-    //     console.log(rs);
-    //   }
-    // });
+    // Saat detail button diclick, lakukan fetch detail RS, lalu tampilkan data tersebut
+    document.addEventListener('click', async (e) => {
+      if (e.target.classList.contains('btn-detail')) {
+        const detail = await ShowSearchPage.fetchDetailRs(e.target.dataset.idhospital, e.target.dataset.tipebed);
+
+        tampilDetailRs(detail);
+      }
+    });
   },
 };
 

@@ -31,6 +31,10 @@ html {
   margin: 0;
 }
 
+.nav-link {
+  font-size: 14pt;
+}
+
 .logo {
   width: 110px;
 }
@@ -214,6 +218,69 @@ nav ul li:hover {
   padding: 1rem;
   background-color: rgba(178, 181, 184, 0.7);
   text-align: center;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
 }
 
-/* loadingPage */
+/* Styling RS */
+.card {
+  box-shadow: 0 8px 32px 0 rgba(212, 212, 212, 0.37);
+}
+
+.card-detailRs {
+  background: rgba(2, 2, 2, 0);
+  box-shadow: 0 8px 32px 0 rgba(212, 212, 212, 0.37);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 10px 40px 40px 40px;
+}
+
+.icon {
+  margin: 0 7px 0 0;
+}
+
+.icon-arrow {
+  margin: 0 0 0 7px;
+}
+
+.full,
+.col-4 .full {
+  border: 3px solid red;
+}
+
+.color-dg {
+  color: red;
+}
+
+.full .availability {
+  background-color: red;
+  height: 6rem;
+  padding: 0 1rem 0 1rem;
+  border-radius: 5px;
+}
+
+.available .availability {
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.2rem;
+  border: 0.2px solid rgb(219, 219, 219);
+  border-radius: 5px;
+  margin-right: 0;
+}
+
+.room {
+  border: 2px dotted #28a745;
+  border-radius: 5px;
+}
+
+.modal-shadow {
+  box-shadow: inset -1px 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-shadow .modal-body {
+  padding-bottom: 0;
+  min-height: 10rem;
+}
+
+.btn-detail {
+  width: 9rem;
+}
