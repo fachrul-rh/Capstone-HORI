@@ -30,7 +30,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/templates/index.html',
       filename: 'index.html',
-      favicon: './src/public/favicon.png'
+      favicon: './src/public/favicon.png',
     }),
     new CopyWebpackPlugin({
       patterns: [
@@ -50,14 +50,14 @@ module.exports = {
         {
           src: path.resolve('src/public/logo.png'),
           sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
-          purpose: 'any maskable'
+          purpose: 'any',
         },
         // {
         //   src: path.resolve('src/public/logo.png'),
         //   size: '1024x1024',
         //   purpose: 'maskable'
         // }
-      ]
+      ],
     }),
     new ServiceWorkerWebpackPlugin({
       entry: path.resolve(__dirname, 'src/script/sw.js'),

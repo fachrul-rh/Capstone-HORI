@@ -13,6 +13,7 @@ const app = new App({
   button: document.querySelector('.myNavToggler'),
   drawer: document.querySelector('.myNav'),
   content: document.querySelector('#main'),
+  search: document.querySelector('#showHospital'),
 });
 
 window.addEventListener('hashchange', () => {
