@@ -1,6 +1,6 @@
 import ShowSearchPage from '../../functions/prov-kota-fetch.js';
 import { hideSelectLoading } from '../../functions/loadingPage';
-import { showHospital } from '../../../templates/template-creator.js';
+import { createTemplateSearch } from '../../../templates/template-creator.js';
 
 const searchPage = {
   async render() {
@@ -9,52 +9,15 @@ const searchPage = {
       <div>
         <h2 class="title" tabindex="0">Search Hospital Room</h2>  
       </div>
-      <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="form-check form-check-inline border rounded p-2 " id="form-check-label1">
-            <input class="form-check-input btn-check" type="radio" name="jenis" id="covidRadios1" value="1" checked/>
-            <label class="form-check-label" for="covidRadios1">RS Bed Covid-19</label>
-          </div>
-        </div>
-        <div class="col">
-          <div class="form-check form-check-inline border rounded p-2 mr-md-3 " id="form-check-label2">
-            <input class="form-check-input btn-check" type="radio" name="jenis" id="covidRadios2" value="2" />
-            <label class="form-check-label" for="covidRadios2">RS Bed Non Covid-19</label>
-          </div>
-        </div>
-      </div>
-
-      <div class="input-group mb-3 mt-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">Provinsi</label>
-        </div>
-        <select class="custom-select provinsi" id="inputGroupSelect01">
-          <option value="" disabled selected hidden>Pilih Provinsi</option>
-        </select>
-      </div>
-      <div class="input-group mb-3 mt-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">Kota/Kabupaten</label>
-        </div>
-        <select class="custom-select kota" id="inputGroupSelect01" disabled>
-          <option value="" disabled selected hidden class="text-muted">Pilih Provinsi Dahulu</option>
-        </select>
-      </div>        
-          <button type="button" class="btn btn-secondary btn-lg btn-search my-btn" disabled>Search</button>        
-      </div>
-    </section>
-    <section id="hospital">
-      <div class="container">
-        <div class="row mt-5 justify-content-center">
-          <div class="col-lg-10 col-12 cardRs"></div>
-        </div>
-      </div>
+      <div id="searchContent"></div>
     </section>
       `;
   },
 
   async afterRender() {
+    //membaut template search
+    const searchContainer = document.querySelector('#searchContent');
+      searchContainer.innerHTML += createTemplateSearch(); //
     // ambil element
     const searchBtn = document.querySelector('.btn-search'),
       optionProv = document.querySelector('.provinsi'),
@@ -111,7 +74,7 @@ const searchPage = {
           tampilRsNonCovid(rs, bed);
         }
       });
-      console.log(infoRs);
+      // console.log(infoRs);
       document.querySelector('.cardRs').innerHTML = infoRs;
     }
 
@@ -140,13 +103,13 @@ const searchPage = {
                             <div class="col d-flex align-items-center ">
                             ${(() => {
                               return rs.phone == null
-                                ? ` <a href="/" onclick="return false;" class="btn btn-primary fw-bold btn-phone disabled-link"><i class="fas fa-phone me-2"></i>Tidak Tersedia</a> `
-                                : `<a href="tel:${rs.phone}" class="btn btn-primary fw-bold btn-phone"><i class="fas fa-phone me-2"></i>${rs.phone}</a>`;
+                                ? ` <a href="/" onclick="return false;" class="btn btn-success fw-bold btn-phone disabled-link"><i class="fas fa-phone me-2"></i>Tidak Tersedia</a> `
+                                : `<a href="tel:${rs.phone}" class="btn btn-success fw-bold btn-phone"><i class="fas fa-phone me-2"></i>${rs.phone}</a>`;
                             })()}
                               
                             </div>
                             <div class="col-lg-3 d-flex align-items-center justify-content-end">
-                              <button type="button" class="btn btn-primary fw-bold btn-detail" data-bs-toggle="modal" data-bs-target="#exampleModal" data-idhospital="${
+                              <button type="button" class="btn btn-success fw-bold btn-detail" data-bs-toggle="modal" data-bs-target="#exampleModal" data-idhospital="${
                                 rs.id
                               }" data-tipebed="${cariTypeBed()}">Detail<i class="fas fa-arrow-right ms-2"></i></button>
                             </div>
@@ -176,14 +139,14 @@ const searchPage = {
                             <div class="col">
                             ${(() => {
                               return rs.phone == null
-                                ? ` <a href="/" onclick="return false;" class="btn btn-primary fw-bold btn-phone disabled-link"><i class="fas fa-phone me-2"></i>Tidak Tersedia</a> `
-                                : `<a href="tel:${rs.phone}" class="btn btn-primary fw-bold btn-phone"><i class="fas fa-phone me-2"></i>${rs.phone}</a>`;
+                                ? ` <a href="/" onclick="return false;" class="btn btn-success fw-bold btn-phone disabled-link"><i class="fas fa-phone me-2"></i>Tidak Tersedia</a> `
+                                : `<a href="tel:${rs.phone}" class="btn btn-success fw-bold btn-phone"><i class="fas fa-phone me-2"></i>${rs.phone}</a>`;
                             })()}
                             </div>
                             <div class="col-lg-3 d-flex align-items-center justify-content-end">
                               
 
-                              <button type="button" class="btn btn-primary fw-bold btn-detail" data-bs-toggle="modal" data-bs-target="#exampleModal" data-idhospital="${
+                              <button type="button" class="btn btn-success fw-bold btn-detail" data-bs-toggle="modal" data-bs-target="#exampleModal" data-idhospital="${
                                 rs.id
                               }" data-tipebed="${cariTypeBed()}">Detail<i class="fas fa-arrow-right ms-2"></i></button>
                             </div>
@@ -242,14 +205,14 @@ const searchPage = {
               <div class="col d-flex align-items-center">
               ${(() => {
                 return rs.phone == null
-                  ? ` <a href="/" onclick="return false;" class="btn btn-primary fw-bold btn-phone disabled-link"><i class="fas fa-phone me-2"></i>Tidak Tersedia</a> `
-                  : `<a href="tel:${rs.phone}" class="btn btn-primary fw-bold btn-phone"><i class="fas fa-phone me-2"></i>${rs.phone}</a>`;
+                  ? ` <a href="/" onclick="return false;" class="btn btn-success fw-bold btn-phone disabled-link"><i class="fas fa-phone me-2"></i>Tidak Tersedia</a> `
+                  : `<a href="tel:${rs.phone}" class="btn btn-success fw-bold btn-phone"><i class="fas fa-phone me-2"></i>${rs.phone}</a>`;
               })()}
               </div>
               <div class="col-lg-3 d-flex align-items-center justify-content-end">
                 
 
-                <button type="button" class="btn btn-primary fw-bold btn-detail" data-bs-toggle="modal" data-bs-target="#exampleModal" data-idhospital="${
+                <button type="button" class="btn btn-success fw-bold btn-detail" data-bs-toggle="modal" data-bs-target="#exampleModal" data-idhospital="${
                   rs.id
                 }" data-tipebed="${cariTypeBed()}">Detail<i class="fas fa-arrow-right ms-2"></i></button>
               </div>

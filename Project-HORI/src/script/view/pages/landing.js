@@ -3,7 +3,7 @@ const landingPage = {
       return `
       <div>
         <h2 class="title" tabindex="0">Welcome to HORI</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reiciendis minima adipisci ad necessitatibus magni hic, nostrum nesciunt magnam quae eligendi amet! Amet reiciendis deleniti architecto dolore laudantium delectus facere.Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reiciendis minima adipisci ad necessitatibus magni hic, nostrum nesciunt magnam quae eligendi amet! Amet reiciendis deleniti architecto dolore laudantium delectus facere.</p>  
+        <p class="text-justify paragraph">Aplikasi berbasis web ini berguna untuk mencari ketersediaan ruang kamar rumah sakit di Indonesia baik rumah sakit yang khusus Covid-19 dan non Covid-19. Aplikasi ini kami buat karena minimnya informasi di masyarakat yang menyangkut tentang ketersediaan kamar kosong di rumah sakit, bahkan masyarakat harus datang terlebih dahulu untuk memastikan apakah masih tersedia kamar di rumah sakit tersebut atau tidak. Hal ini akan memberatkan pasien yang jauh dari rumah sakit, sayangnya mungkin rumah sakit yang dia tuju ternyata sudah over kapasitas. Untuk  itu aplikasi ini dibuat bertujuan untuk memudahkan masyarakat mendapatkan informasi tersebut.</p>  
       </div>
       `;
     },

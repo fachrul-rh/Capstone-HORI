@@ -191,8 +191,21 @@ nav ul li:hover {
   transform: translateX(-50%);
 }
 
-/* footer */
+/*text paragraph*/
+.paragraph {
+  margin: 0 300px;
+}
 
+/*API page*/
+.paragraph a {
+  color: rgb(3, 180, 3);
+}
+.paragraph a:hover {
+  text-decoration: none;
+  color: rgb(2, 145, 2);
+}
+
+/* footer */
 .downfooter {
   margin: 40px 0 0 0;
   right: 0;
@@ -201,15 +214,6 @@ nav ul li:hover {
   padding: 1rem;
   background-color: rgba(178, 181, 184, 0.7);
   text-align: center;
-}
-
-footer a {
-  color: rgb(3, 180, 3);
-}
-
-footer a:hover {
-  text-decoration: none;
-  color: rgb(2, 145, 2);
 }
 
 /* loadingPage */
