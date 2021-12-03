@@ -33,6 +33,16 @@ class ShowSearchPage {
       console.log(err);
     }
   }
+
+  static async fetchDetailRs(idHospital, tipeBed) {
+    try {
+      const response = await fetch('https://rs-bed-covid-api.vercel.app/api/get-bed-detail?hospitalid=' + idHospital + '&type=' + tipeBed);
+      const detailRs = await response.json();
+      return detailRs.data;
+    } catch (e) {
+      console.log(e);
+    }
+  }
 }
 
 export default ShowSearchPage;
