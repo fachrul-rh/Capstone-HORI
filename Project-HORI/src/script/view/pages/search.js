@@ -1,5 +1,5 @@
 import ShowSearchPage from '../../functions/prov-kota-fetch.js';
-import { hideSelectLoading } from '../../functions/loadingPage';
+import { hideSelectLoading, hidePageLoading, modalLoading } from '../../functions/loadingPage';
 import { createTemplateSearch } from '../../../templates/template-creator.js';
 
 const searchPage = {
@@ -26,11 +26,13 @@ const searchPage = {
     const radio = document.querySelectorAll('.btn-check');
     let infoRs = ``;
 
+
     function cariTypeBed() {
       return radio[0].checked === true ? (searchBtn.dataset.tipebed = radio[0].value) : (searchBtn.dataset.tipebed = radio[1].value);
     }
 
     const tampilProvinsi = (provinsi) => {
+      hideSelectLoading(optionProv);
       let dropdownProv = `<option value ="" disabled selected hidden>Pilih Provinsi</option>`;
 
       provinsi.forEach((provinsi) => {
@@ -50,6 +52,7 @@ const searchPage = {
     };
 
     function tampilCardRs(rs) {
+      hidePageLoading();
       let tipeBed = cariTypeBed();
       infoRs = `<h3 class="fw-bold mb-4 text-center">Daftar Rumah Sakit</h3>`;
       if (rs.length === 0) {
@@ -306,6 +309,7 @@ const searchPage = {
     // Saat detail button diclick, lakukan fetch detail RS, lalu tampilkan data tersebut
     document.addEventListener('click', async (e) => {
       if (e.target.classList.contains('btn-detail')) {
+        modalLoading();
         const detail = await ShowSearchPage.fetchDetailRs(e.target.dataset.idhospital, e.target.dataset.tipebed);
 
         tampilDetailRs(detail);
