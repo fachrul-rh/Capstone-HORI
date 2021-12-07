@@ -1,5 +1,5 @@
 import ShowSearchPage from '../../functions/prov-kota-fetch.js';
-import { hideSelectLoading, hidePageLoading, modalLoading } from '../../functions/loadingPage';
+import { hideSelectLoading, hidePageLoading, modalLoading, modalButtonLoading } from '../../functions/loadingPage';
 import { createTemplateSearch } from '../../../templates/template-creator.js';
 
 const searchPage = {
@@ -299,6 +299,7 @@ const searchPage = {
 
     // Saat search button diklik, lakukan fetch data rs, lalu tampilkan data tersebut
     searchBtn.addEventListener('click', async function () {
+      modalButtonLoading();
       this.dataset.tipebed = cariTypeBed();
       const rs = await ShowSearchPage.fetchRs(this.dataset.idprov, this.dataset.idkota, this.dataset.tipebed);
 

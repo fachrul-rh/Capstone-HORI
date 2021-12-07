@@ -234,9 +234,9 @@ nav ul li:hover {
 
 .loader {
   border: 0.5rem solid transparent;
-  border-top: 0.5rem solid #3498db;
-  border-right: 0.5rem solid #3498db;
-  border-left: 0.5rem solid #3498db;
+  border-top: 0.5rem solid #28a745;
+  border-right: 0.5rem solid #28a745;
+  border-left: 0.5rem solid #28a745;
   border-radius: 50%;
   width: 4rem;
   height: 4rem;

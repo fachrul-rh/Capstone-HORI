@@ -43,4 +43,22 @@ const modalLoading = () => {
   sectionDetail.innerHTML = loader;
 };
 
-export { selectLoading, hideSelectLoading, pageLoading, hidePageLoading, modalLoading };
+const modalButtonLoading = () => {
+  const sectionDetail = document.querySelector('.cardRs');
+  const loader = `<div class="loader" role="status">
+                    <span class="visually-hidden"></span>
+                  </div>
+                  <div class="modal-body">
+                    <div class="container mt-5">
+                      <div class="row justify-content-center">
+                        <div class="col-lg-10 col-12">
+                          <h5 class="display-5 fw-bold">Daftar Rumah Sakit</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>`;
+
+  sectionDetail.innerHTML = loader;
+};
+
+export { selectLoading, hideSelectLoading, pageLoading, hidePageLoading, modalLoading, modalButtonLoading };
