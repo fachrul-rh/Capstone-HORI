@@ -263,7 +263,7 @@ nav ul li:hover {
 }
 
 .select-wrapper::after {
-  content: "";
+  content: '';
   border-radius: 50%;
   border: 3px solid transparent;
   border-top: 3px solid rgb(0, 68, 255);
@@ -352,4 +352,13 @@ nav ul li:hover {
   text-align: center;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

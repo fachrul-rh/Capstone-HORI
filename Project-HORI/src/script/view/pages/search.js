@@ -26,7 +26,6 @@ const searchPage = {
     const radio = document.querySelectorAll('.btn-check');
     let infoRs = ``;
 
-
     function cariTypeBed() {
       return radio[0].checked === true ? (searchBtn.dataset.tipebed = radio[0].value) : (searchBtn.dataset.tipebed = radio[1].value);
     }

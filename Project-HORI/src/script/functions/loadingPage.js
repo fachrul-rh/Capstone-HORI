@@ -1,38 +1,34 @@
-
-
-
-
 const selectLoading = (selectElement) => {
   console.log(selectElement);
-  selectElement.parentElement.classList.add("select-wrapper");
-  selectElement.classList.replace("form-select", "loading-form-select");
+  selectElement.parentElement.classList.add('select-wrapper');
+  selectElement.classList.replace('form-select', 'loading-form-select');
   selectElement.disabled = true;
-}
+};
 
 const hideSelectLoading = (select) => {
-  select.parentElement.classList.remove("select-wrapper");
-  select.classList.replace("loading-form-select", "form-select");
+  select.parentElement.classList.remove('select-wrapper');
+  select.classList.replace('loading-form-select', 'form-select');
   select.disabled = false;
 };
 
 const pageLoading = () => {
-  const loader = document.querySelector(".loading");
+  const loader = document.querySelector('.loading');
   console.log(loader);
-  loader.classList.remove("d-none");
-}
+  loader.classList.remove('d-none');
+};
 
 const hidePageLoading = () => {
-  const loader = document.querySelector(".loading");
-  const cardRs = document.querySelector(".cardRs");
-  loader.classList.add("d-none");
-  cardRs.style.opacity = "0";
-  setTimeout(() => (cardRs.style.opacity = "1"), 100);
-}
+  const loader = document.querySelector('.loading');
+  const cardRs = document.querySelector('.cardRs');
+  loader.classList.add('d-none');
+  cardRs.style.opacity = '0';
+  setTimeout(() => (cardRs.style.opacity = '1'), 100);
+};
 
 const modalLoading = () => {
   const sectionDetail = document.querySelector('.cardRs');
   const loader = `<div class="loader" role="status">
-                    <span class="visually-hidden">Loading...</span>
+                    <span class="visually-hidden"></span>
                   </div>
                   <div class="modal-body">
                     <div class="container mt-5">
@@ -45,6 +41,6 @@ const modalLoading = () => {
                   </div>`;
 
   sectionDetail.innerHTML = loader;
-}
+};
 
 export { selectLoading, hideSelectLoading, pageLoading, hidePageLoading, modalLoading };
