@@ -1,20 +1,19 @@
-
 const createTemplateSearch = () => `
-<div class="container">
-      <div class="row">
-        <div class="col">
+<div class="container">    
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
           <div class="form-check form-check-inline border rounded p-2 " id="form-check-label1">
             <input class="form-check-input btn-check" type="radio" name="jenis" id="covidRadios1" value="1" checked/>
             <label class="form-check-label" for="covidRadios1">RS Bed Covid-19</label>
-          </div>
+          </div>          
         </div>
-        <div class="col">
+        <div class="col-md-6 mb-3">
           <div class="form-check form-check-inline border rounded p-2 mr-md-3 " id="form-check-label2">
             <input class="form-check-input btn-check" type="radio" name="jenis" id="covidRadios2" value="2" />
             <label class="form-check-label" for="covidRadios2">RS Bed Non Covid-19</label>
           </div>
         </div>
-      </div>
+      </div>    
 
       <div class="input-group mb-3 mt-3">
         <div class="input-group-prepend">
@@ -41,6 +40,6 @@ const createTemplateSearch = () => `
           <div class="col-lg-10 col-12 cardRs"></div>
         </div>
       </div>
-`
+`;
 
 export { createTemplateSearch };

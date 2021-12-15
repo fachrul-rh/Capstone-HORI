@@ -1,5 +1,4 @@
 const selectLoading = (selectElement) => {
-  console.log(selectElement);
   selectElement.parentElement.classList.add('select-wrapper');
   selectElement.classList.replace('form-select', 'loading-form-select');
   selectElement.disabled = true;
@@ -13,7 +12,6 @@ const hideSelectLoading = (select) => {
 
 const pageLoading = () => {
   const loader = document.querySelector('.loading');
-  console.log(loader);
   loader.classList.remove('d-none');
 };
 

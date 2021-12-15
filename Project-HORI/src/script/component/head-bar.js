@@ -7,7 +7,7 @@ class HeadBar extends HTMLElement {
     this.innerHTML = `
       <div class="jumbotron bg-white">        
           <div class="container">
-            <h1 class="display-4 font-weight-bold">Hospital Room Information</h1>
+            <h1 class="display-4 font-weight-bold head-title">Hospital Room Information</h1>
             <p class="lead">Mencari ketersediaan kamar rumah sakit yang tersedia di indonesia</p>                        
           </div>
         </div>
