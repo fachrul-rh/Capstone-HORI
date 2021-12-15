@@ -195,9 +195,10 @@ nav ul li:hover {
   transform: translateX(-50%);
 }
 
-/*text paragraph*/
+/* text */
 .paragraph {
-  margin: 0 300px;
+  font-family: 'Source Sans Pro';
+  font-size: 14pt;
 }
 
 /*API page*/
@@ -301,7 +302,7 @@ nav ul li:hover {
 
 .full,
 .col-4 .full {
-  border: 3px solid red;
+  border: 3px outset red;
 }
 
 .color-dg {
@@ -324,7 +325,7 @@ nav ul li:hover {
 }
 
 .room {
-  border: 2px dotted #28a745;
+  border: 3px outset #28a745;
   border-radius: 5px;
 }
 
@@ -339,6 +340,20 @@ nav ul li:hover {
 
 .btn-detail {
   width: 9rem;
+}
+
+/* search page */
+#form-check-label1,
+#form-check-label2 {
+  padding: 6.5px 0px;
+  border-radius: 5px;
+  border: 1px solid rgb(128, 128, 128);
+  background-color: #fff;
+  width: 100% !important;
+}
+
+.form-check-label {
+  text-align: center;
 }
 
 /* footer */

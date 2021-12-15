@@ -1,13 +1,10 @@
 import dataSource from '../data/data-source';
 import { selectLoading, pageLoading } from './loadingPage';
 
-
-
 class ShowSearchPage {
   static async fetchProvinsi() {
     const optionProv = document.querySelector('.provinsi');
 
-    console.log(optionProv)
     selectLoading(optionProv);
     try {
       const response = await fetch(dataSource.GET_PROVINSI);

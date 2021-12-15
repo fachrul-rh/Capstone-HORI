@@ -1,3 +1,24 @@
+@media (max-width: 991px) {
+  .btn-phone,
+  .btn-loc,
+  .btn-detail,
+  .availability {
+    width: 100%;
+  }
+
+  .btn-phone,
+  .btn-loc,
+  .btn-detail {
+    margin: 0.5rem 0 0 0;
+  }
+
+  .availability {
+    text-align: center;
+    margin: 1.5rem 0 0 0;
+    padding: 0;
+  }
+}
+
 /* appBar */
 @media (max-width: 767px) {
   .brands a {
@@ -35,5 +56,26 @@
   .navigation-clean-search .form-inline .search-field {
     display: inline-block;
     width: 80%;
+  }
+
+  .jumbotron {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 490px) {
+  .card-detailRs {
+    margin: 2px;
+    padding: 3px;
+  }
+
+  .detail-rs {
+    padding: 0;
+  }
+}
+
+@media (max-width: 390px) {
+  .head-title {
+    font-size: 30pt;
   }
 }
