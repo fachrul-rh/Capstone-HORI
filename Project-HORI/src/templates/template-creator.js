@@ -31,7 +31,7 @@ const createTemplateSearch = () => `
           <option value="" disabled selected hidden class="text-muted">Pilih Provinsi Dahulu</option>
         </select>
       </div>        
-          <button type="button" class="btn btn-secondary btn-lg btn-search my-btn" disabled>Search</button>        
+          <button type="button" class="btn btn-dark btn-lg btn-search my-btn" disabled>Search</button>        
       </div>
     </section>
     <section id="hospital">
