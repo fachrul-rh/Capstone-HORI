@@ -17,6 +17,14 @@
     margin: 1.5rem 0 0 0;
     padding: 0;
   }
+
+  .text-white h2 {
+    font-size: 2rem;
+  }
+
+  .my-name {
+    margin-left: 0;
+  }
 }
 
 /* appBar */
@@ -77,5 +85,34 @@
 @media (max-width: 390px) {
   .head-title {
     font-size: 30pt;
+  }
+}
+
+/*about*/
+
+@media (min-width: 991px) and (max-width:1200px) {
+  .skill-block {
+      padding: 32px !important
+  };
+}
+
+@media (min-width: 1200px) {
+  .skill-block {
+      padding: 56px !important
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-block {
+    padding: 16px !important
+  }
+  .skill-block p {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .skill-block {
+    padding: 8px !important
   }
 }
