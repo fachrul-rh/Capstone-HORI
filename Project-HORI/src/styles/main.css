@@ -360,19 +360,27 @@ nav ul li:hover {
 img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
+
+.img-dev {
+  z-index: -1;
+}
+
 .bg-black {
-  background: #000
+  background: #000;
 }
 
 .skill-block {
   width: 30%;
-  transition: transform .2s;
+  transition: transform 0.2s;
   height: 200px;
 }
 
 .skill-block:hover {
   transform: scale(1.5);
+  border-radius: 10px;
 }
 
 .skill-block p {
@@ -384,7 +392,7 @@ img {
 }
 
 .my-name {
-  margin-left: 430px;
+  margin-left: 110px;
 }
 
 /* footer */
