@@ -32,7 +32,7 @@ const modalLoading = () => {
                     <div class="container mt-5">
                       <div class="row justify-content-center">
                         <div class="col-lg-10 col-12">
-                          <h5 class="display-5 fw-bold">Detail Rumah Sakit</h5>
+                          <h5 class="title-loading display-5 fw-bold">Detail Rumah Sakit</h5>
                         </div>
                       </div>
                     </div>
@@ -50,7 +50,7 @@ const modalButtonLoading = () => {
                     <div class="container mt-5">
                       <div class="row justify-content-center">
                         <div class="col-lg-10 col-12">
-                          <h5 class="display-5 fw-bold">Daftar Rumah Sakit</h5>
+                          <h5 class="title-loading display-5 fw-bold">Daftar Rumah Sakit</h5>
                         </div>
                       </div>
                     </div>

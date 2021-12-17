@@ -69,6 +69,10 @@
   .jumbotron {
     margin-top: 0;
   }
+
+  .title-loading {
+    display: none;
+  }
 }
 
 @media (max-width: 490px) {
