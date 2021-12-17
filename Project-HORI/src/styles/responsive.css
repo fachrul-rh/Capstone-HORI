@@ -90,21 +90,21 @@
 
 /*about*/
 
-@media (min-width: 991px) and (max-width:1200px) {
+@media (min-width: 992px) and (max-width: 1200px) {
   .skill-block {
-      padding: 32px !important
-  };
+    padding: 32px !important;
+  }
 }
 
 @media (min-width: 1200px) {
   .skill-block {
-      padding: 56px !important
+    padding: 56px !important;
   }
 }
 
 @media (max-width: 480px) {
   .skill-block {
-    padding: 16px !important
+    padding: 16px !important;
   }
   .skill-block p {
     font-size: 2rem;
@@ -113,6 +113,6 @@
 
 @media (max-width: 300px) {
   .skill-block {
-    padding: 8px !important
+    padding: 8px !important;
   }
 }
